@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GRID SYSTEM</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="grid-system">
+                
+            </div>
+        </div>
+        <script defer>
+            var divCount = 7
+            const $ = document.querySelector.bind(document)
+            var grid = $('.grid-system')
+            for(var i=1;i<=divCount;i++){
+                grid.insertAdjacentHTML('beforeend',`<div class="div${i}"></div>`)
+            }
+        </script>
+    </body>
+</html>

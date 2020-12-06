@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body > .container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .container .grid-system {
+  display: grid;
+  gap: 10px;
+  width: 500px;
+  height: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "part1 part4 part6" "part2 part4 part7" "part3 part5 part5";
+}
+body > .container .grid-system .div1 {
+  grid-area: part1;
+  background: url("../img/img1.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div2 {
+  grid-area: part2;
+  background: url("../img/img2.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div3 {
+  grid-area: part3;
+  background: url("../img/img3.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div4 {
+  grid-area: part4;
+  background: url("../img/img4.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div5 {
+  grid-area: part5;
+  background: url("../img/img5.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div6 {
+  grid-area: part6;
+  background: url("../img/img6.jpg");
+  background-size: cover;
+}
+body > .container .grid-system .div7 {
+  grid-area: part7;
+  background: url("../img/img7.jpg");
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

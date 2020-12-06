@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    > .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // .grid-system {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, 200px); // 200px 200px 200px
+        //     grid-template-rows: repeat(3, 200px);
+        //     gap: 10px;
+        //     // > div{
+        //     //     background:rgb(22, 22, 184);
+        //     // }
+        //     .div1{
+        //         grid-row: 1;
+        //         grid-column: 1;
+        //     }
+        //     .div2{
+        //         grid-row: 2;
+        //         grid-column: 1;
+        //     }
+        //     .div3{
+        //         grid-row: 3;
+        //         grid-column: 1;
+        //     }
+        //     .div4{
+        //         grid-column: 2;
+        //         grid-row-start: 1;
+        //         grid-row-end: 3;
+        //     }
+        //     .div5{
+        //         grid-row: 3;
+        //         grid-column-start: 2;
+        //         grid-column-end: 4;
+        //     }
+        //     .div6{
+        //         grid-row: 1;
+        //         grid-column: 3;
+        //     }
+        //     .div7{
+        //         grid-row: 2;
+        //         grid-column: 3;
+        //     }
+        //     @for $i from 1 through 7{
+        //         .div#{$i}{
+        //             background:url('../img/img#{$i}.jpg');
+        //             background-size: cover;
+        //         }
+        //     }
+        // }
+        .grid-system {
+            display: grid;
+            gap: 10px;
+            width: 500px;
+            height: 500px;
+            grid-template-columns: repeat(3, 1fr); // 200px 200px 200px
+            grid-template-rows: repeat(3, 1fr);
+            @for $i from 1 through 7{
+                .div#{$i}{
+                    grid-area: part#{$i};
+                    background:url('../img/img#{$i}.jpg');
+                    background-size: cover;
+                }
+            }
+            grid-template-areas: "part1 part4 part6"
+                                 "part2 part4 part7"
+                                 "part3 part5 part5";
+        }
+    }
+}
